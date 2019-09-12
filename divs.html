@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <Title>Technology - BBC News</Title>
+
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <style type="text/css">
+            body {
+                margin: 0 auto;
+                padding: 0px;
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: #fff;
+            }
+
+            #top-bar {
+                background-color: white;
+                width: 100%;
+                height: 40px;
+            }
+
+            #header {
+                background-color: #bb1919;
+                width: 100%;
+                height: 70px;
+            }
+
+            #page-container {
+                max-width: 100vw;
+                width: 100%;
+                margin: 0px;
+                background-color: white;
+                height: 100vh;  
+            }
+
+            .main-article {
+                margin:30px auto;
+                max-width: 85%;
+                width: 61vw;
+                height: fit-content;
+                background-color: white;
+                border-right: 1px #CCCCCC solid;
+                float: left;
+            }
+
+            .main-article h1 {
+                margin: 30px 0 0 100px;
+            }
+
+            .main-article h2 {
+                margin: 0px;
+                color: #15678a;
+                border-bottom: 2px solid #bb1919;
+                width: fit-content;
+                position: relative;
+                top: 10px;
+                left: 100px;
+            }
+
+            #article {
+                padding: 20px 0 0 100px;
+                width: 275px;
+                float: left;
+            }
+
+            #article-info {
+                font-size: 14px;
+                color: #5a5a5a;
+                margin: 0px 0 0 125px;
+                position: relative;
+                top: -90px;
+            }
+
+            .main-article hr {
+                width: 40px;
+                border-top: 1px #BB1919 solid;
+                margin: 0px 0 30px 100px;
+                position: relative;
+                top: -70px;
+            }
+
+            .link {
+                text-decoration: none;
+                color: black;
+                font-size: 15px;
+                padding-left: 100px;
+                padding-bottom: 0px;
+                float: left;
+                position: relative;
+                top:-70px;
+            }
+            .link:hover {
+                text-decoration: underline #BB1919;
+            }
+
+            .main-article img {
+                position: relative;
+                top: 35px;
+                left: 35px;
+            }
+
+            #watch-listen {
+                float: right;
+                width: 30%;
+            }
+
+            #watch-listen h2 {
+                color: black;
+                font-weight: normal;
+                margin-top: 25px;
+                padding: 0px;
+            }
+
+            .layout {
+                position: relative;
+                top: 20px;
+                left: -95px;
+            }
+
+            .video {
+                margin: 20px 0 0 20px;
+                float: left;
+            }
+
+            .video-desc {
+                color: black;
+                font-weight: bold;
+                margin: 20px 10px;                
+                width: 190px;
+                float: left;
+                text-decoration: none;
+            }
+            .video-desc:hover {
+                color: #15678a;
+                cursor: pointer;
+            }
+
+            .uploaded {
+                font-size: 12px;
+                color: #5a5a5a;
+            }
+
+            .genre {
+                color: #BB1919;
+                font-size: 11px;
+                text-decoration: none;
+            }
+            .genre:hover {
+                color: #15678a;
+                cursor: pointer;
+            }
+
+            /*Here come the top-bar*/
+
+            #bbc-logo {
+                background-color: white;
+                height: 33px;
+                width: 105px;
+                padding: 7px 0px 0 80px;
+                border-right: 1px #CCCCCC solid;
+                float: left;
+            }
+
+            #sign-in {
+                width: 200px;
+                height: 40px;
+                border-right: 1px #CCCCCC solid;
+                float: left;
+            }
+
+            #sign-in img {
+                height: 25px;
+                margin: 7px 10px;
+                float: left;
+            }
+
+            #sign-in-tab {
+                font-weight: bold;
+                font-size: 13px;
+                text-decoration: none;
+                color: black;
+                position: relative;
+                top: 11px;
+            }
+
+            .menu-tabs {
+                font-size: 13px;
+                font-weight: bold;
+                text-align: center;
+                width: fit-content;
+                height: 28px;
+                border-right: 1px #CCCCCC solid;
+                float: left;
+                padding: 12px 15px 0 15px;
+            }
+
+            .menu-tabs a {
+                text-decoration: none;
+                color: black;
+            }
+
+            #more-tab {
+                font-size: 13px;
+                font-weight: bold;
+                text-align: left;
+                width: 120px;
+                height: 28px;
+                border-right: 1px #CCCCCC solid;
+                float: left;
+                padding: 12px 15px 0 15px;
+            }
+
+            #more-tab a {
+                text-decoration: none;
+                color: black;
+            }
+
+            #more-tab img {
+                height: 12px;
+                margin-left: 60px;
+            }
+
+            #search-bar {
+                border: none;
+                background-color: #CCCCCC;
+                margin: 9px 0 0 10px;
+                height: 20px;
+                float: left;
+                padding-left: 7px;
+            }
+
+            #search-bar::placeholder {
+                font-weight: bold;
+                color: black;
+            }
+
+            #magnify-glass {
+                height: 16px;
+                background-color: #CCCCCC;
+                margin-top: 9px;
+                padding: 3px;
+            }
+
+            /*Box-shadows for topbar menü*/
+
+            #sign-in:hover {
+                box-shadow: inset 0 -4px 0 0 #1188BB;
+            }
+
+            #Home:hover {
+                box-shadow: inset 0 -4px 0 0 black;
+            }
+
+            #News:hover {
+                box-shadow: inset 0 -4px 0 0 #BB1919;
+            }
+
+            #Sport:hover {
+                box-shadow: inset 0 -4px 0 0 #FFD230;
+            }
+
+            #Reel:hover {
+                box-shadow: inset 0 -4px 0 0 #0068FF;
+            }
+
+            #Worklife:hover {
+                box-shadow: inset 0 -4px 0 0 #0052A1;
+            }
+            
+            #Travel:hover {
+                box-shadow: inset 0 -4px 0 0 #589E50;
+            }
+
+            #Future:hover {
+                box-shadow: inset 0 -4px 0 0 #002856;
+            }
+
+            #Culture:hover {
+                box-shadow: inset 0 -4px 0 0 #482878;
+            }
+
+            #more-tab:hover {
+                box-shadow: inset 0 -4px 0 0 #262626;
+            }
+
+            #header {
+                height: 60px;
+            }
+
+            #header h1 {
+                margin: 0px;
+                padding: 10px 0 0 80px;
+                color: white;
+                font-size: 45px;
+                font-weight: normal;
+            }
+
+            #header a {
+                text-decoration: none;
+            }
+
+            #header-menu-container {
+                width: 100%;
+                height: 38px;
+                background-color: #BB1919;
+            }
+
+            .header-menu-tabs {
+                color: white;
+                text-decoration: none;
+                font-size: 14px;
+                float: left;
+                margin: 14px 0 0 ;
+                padding: 3px 10px;
+                border-right: 1px #BB454F solid;
+                width: fit-content;
+                height: fit-content;
+            }
+
+            #header-menu {
+                width: 1200px;
+                margin: 0 auto;
+                height: 100%;
+                background-color: #BB1919;
+            }
+
+            .header-menu-tabs:hover {
+                box-shadow: 0 3px 0 0 white;
+            }
+            
+            #More-menu-tab {
+                color: white;
+                text-decoration: none;
+                font-size: 14px;
+                float: left;
+                margin: 12px 0 0 ;
+                padding: 3px 10px 5px 10px;
+                width: 80px;
+                height: fit-content;
+            }
+
+            #More-menu-tab img {
+                height: 15px;
+                margin-left: 15px;
+                position: relative;
+                top: 2px;
+            }
+
+            #More-menu-tab:hover {
+                background-color: black;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div id="top-bar">
+            <div id="bbc-logo"><a href=""><img src="BBC_icon.JPG" alt=""></a></div>
+            <div id="sign-in">
+                <img src="signin_image.JPG" alt="">
+                <a id="sign-in-tab" href="">Sign in</a>
+            </div>
+
+            <div class="menu-tabs" id="Home">
+                <a href="">Home</a>
+            </div>
+
+            <div class="menu-tabs" id="News">
+                <a href="">News</a>
+            </div>
+
+            <div class="menu-tabs" id="Sport">
+                <a href="">Sport</a>
+            </div>
+
+            <div class="menu-tabs" id="Reel">
+                    <a href="">Reel</a>
+            </div>
+
+            <div class="menu-tabs" id="Worklife">
+                <a href="">Worklife</a>
+            </div>
+
+            <div class="menu-tabs" id="Travel">
+                <a href="">Travel</a>
+            </div>
+
+            <div class="menu-tabs" id="Future">
+                <a href="">Future</a>
+            </div>
+
+            <div class="menu-tabs" id="Culture">
+                <a href="">Culture</a>
+            </div>
+
+            <div id="more-tab">
+                <a href="">More</a>
+                <a href=""><img src="down-arrow.JPG" alt=""></a>
+            </div>
+
+            <div>
+                <input id="search-bar" type="text" placeholder="Search">
+                <input id="magnify-glass" type="image" src="search_icon.png">
+            </div>
+        </div>
+
+        <div id="header">
+            <a href=""><h1>NEWS</h1></a>
+        </div>
+
+        <div id="header-menu-container">
+            <div id="header-menu">
+                    <a href="" class="header-menu-tabs">Home</a>
+                    <a href="" class="header-menu-tabs">Video</a>
+                    <a href="" class="header-menu-tabs">World</a>
+                    <a href="" class="header-menu-tabs">UK</a>
+                    <a href="" class="header-menu-tabs">Business</a>
+                    <a href="" class="header-menu-tabs">Tech</a>
+                    <a href="" class="header-menu-tabs">Science</a>
+                    <a href="" class="header-menu-tabs">Stories</a>
+                    <a href="" class="header-menu-tabs">Entertainment & Arts</a>
+                    <a href="" class="header-menu-tabs">Health</a>
+                    <a href="" class="header-menu-tabs">World News TV</a>
+                    <a href="" class="header-menu-tabs">In Picture</a>
+                    <a href="" class="header-menu-tabs">Reality Check</a>
+                    <a href="" class="header-menu-tabs">Newsbeat</a>
+                    <a href="" id="More-menu-tab">More <img src="white-dropdown-arrow.png" alt=""></a>
+            </div>
+        </div>
+
+        <div id="page-container">
+            <div class="main-article">
+                <h2>Technology</h2>
+
+                <h1>Asda bug exposed payment details</h1>
+
+                <p id="article">Security vulnerabilities that put customers at risk have affected Asda's website for 
+                    a couple of years,a security expert has revealed.
+                </p>
+
+                <img src="ASDA.JPG" alt="">
+
+                <p id="article-info">2 hours | Technology</p>
+
+                <hr align="left">
+
+                <a class="link" href="">Rocky - The Eye of the Tiger</a>
+                <br>
+                <br>
+                <a class="link" href="">Itt a vége, fuss el véle</a>
+
+                
+            </div>
+
+            <div id="watch-listen" class="layout">
+                <h2>Watch/Listen</h2>
+
+                <img class="video" src="drone.JPG" alt="">
+                <p class="video-desc">Drone register gives 'accountability'
+                    <br>
+                    <span class="uploaded">1 hour ago</span>
+                    <br>
+                    <span class="genre">Technology</span>
+                </p>
+
+                <img class="video" src="UK-science.JPG" alt="">
+                <p class="video-desc">UK science chief backs blockchains
+                    <br>
+                    <span class="uploaded">18 January 2016</span>
+                    <br>
+                    <span class="genre">Technology</span>
+                </p>
+
+                <img class="video" src="spaceX.JPG" alt="">
+                <p href="" class="video-desc">SpaceX rocket explodes during landing
+                    <br>
+                    <span class="uploaded">18 January 2016</span>
+                    <br>
+                    <a href="" class="genre">Science & Environment</a>
+                </p>
+            </div>
+
+        </div>
+
+    </body>
+</html>
